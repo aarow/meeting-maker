@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { MeetingService } from "./components/meeting/meeting.service";
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -25,7 +27,8 @@ import { HeaderLogoComponent } from "./components/header/header-logo/header-logo
     HttpModule,
     AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MeetingService],
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

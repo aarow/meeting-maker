@@ -5,6 +5,7 @@ import { HomePageModule } from "./pages/home/home.module";
 import { PageNotFoundPageModule } from "./pages/404/404.module";
 
 
+
 const appRoutes: Routes = [
     { path: 'home', loadChildren: "./pages/home/home.module#HomePageModule"  },
     { path: '',
@@ -20,10 +21,12 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    
   ],
   exports: [
       RouterModule
-  ]
+  ],
+  providers: []
 })
 export class AppRoutingModule { }
